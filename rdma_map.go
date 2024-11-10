@@ -13,16 +13,13 @@ import (
 )
 
 const (
-	RdmaClassName     = "infiniband"
-	RdmaClassDir      = "/sys/class/infiniband"
-	RdmaIbUcmDir      = "/sys/class/infiniband_cm"
+	RdmaClassName = "infiniband"
+
 	RdmaUcmFilePrefix = "ucm"
 
-	RdmaUmadDir        = "/sys/class/infiniband_mad"
 	RdmaIssmFilePrefix = "issm"
 	RdmaUmadFilxPrefix = "umad"
 
-	RdmaUverbsDir        = "/sys/class/infiniband_verbs"
 	RdmaUverbsFilxPrefix = "uverbs"
 
 	RdmaGidAttrDir     = "gid_attrs" //nolint:stylecheck,revive
@@ -30,14 +27,9 @@ const (
 	RdmaPortsdir       = "ports"
 
 	RdmaNodeGuidFile = "node_guid" //nolint:stylecheck,revive
-	RdmaUcmDevice    = "/dev/infiniband/rdma_cm"
-	RdmaDeviceDir    = "/dev/infiniband"
 
 	RdmaCountersDir   = "counters"
 	RdmaHwCountersDir = "hw_counters"
-
-	PciDevDir = "/sys/bus/pci/devices"
-	AuxDevDir = "/sys/bus/auxiliary/devices"
 
 	// For local usage
 	prevDir        = ".."
@@ -45,6 +37,21 @@ const (
 	loopBackIfName = "lo"
 
 	ReadOnlyPermissions = 0444
+)
+
+var (
+	RdmaClassDir = "/sys/class/infiniband"
+	RdmaIbUcmDir = "/sys/class/infiniband_cm"
+
+	RdmaUmadDir = "/sys/class/infiniband_mad"
+
+	RdmaUverbsDir = "/sys/class/infiniband_verbs"
+
+	RdmaUcmDevice = "/dev/infiniband/rdma_cm"
+	RdmaDeviceDir = "/dev/infiniband"
+
+	PciDevDir = "/sys/bus/pci/devices"
+	AuxDevDir = "/sys/bus/auxiliary/devices"
 )
 
 // GetRdmaDeviceList Returns a list of rdma device names
